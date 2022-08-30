@@ -24,7 +24,7 @@ def valoresIngresados():
     num = float(input("Digite un número: "))
     # Método Round, sirve para redondear los números y la cantidad de cifras que desea.
     print(f"El número redondeado a cuatro cifras es - {round(num, 4)}")
-    error = (round(num, 2) - num)
+    error = (round(num, 4) - num)
     print(f"El error es {error}")
 
 # ------------------------------------------------------
