@@ -49,9 +49,10 @@ def calculoLogE():
                 f"El número redondeado a cuatro cifras es - {round(numLog, 4)}")
             errorLog = (round(numLog, 4) - numLog)
             print(f"El error del logaritmo ingresado es - {errorLog}")
+            break
         elif (menu == 3):
             print("Fin del programa")
-
+            break
 # ------------------------------------------------------
 
 
