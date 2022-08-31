@@ -10,11 +10,13 @@ def binarioDecDecimal(binario):
         x = int(binario[i]) * 1/n
         decimal = decimal + x
         n = n*2
-    return decimal
+    decimal = str(decimal)
+    parteDecimal = decimal[2:len(decimal)]
+    return parteDecimal
 
 def separarNumero(numero):
     entero, puntoPos = parteEntera(numero)
-    print('entero: ' + str(entero))
+    #print('entero: ' + str(entero))
     decimal = 0
     if puntoPos != len(str(numero)):
         decimal = parteDecimal(numero, puntoPos)
@@ -38,8 +40,8 @@ def parteDecimal(numero, puntoPos):
     for i in range(len(numero)):
         if (i > puntoPos):
             decimal = decimal + numero[i]
-    intDecimal = int(decimal)
-    return intDecimal
+    #intDecimal = int(decimal)
+    return decimal
 
 def extraerSigno(numero):
     numero = str(numero)
@@ -47,15 +49,16 @@ def extraerSigno(numero):
     if numero[0] == "-":
         signo = "1"
         numero = numero[1:len(numero)]
-    return signo, float(numero)
+    return str(signo), numero
 
+#################################################
 
 signo = input('Signo: ')
 exponente = input('Exponente: ')
 mantisa = input('Mantisa: ')
 
 numBin = signo + ' ' + exponente + ' ' + mantisa
-print(numBin)
+print('El número ingresado es: ' + numBin)
 
 if signo == '0':
     decSigno = '+'
@@ -68,7 +71,7 @@ exp = binarioDecimal(exponente)
 e = exp - expMax//2
 
 notacionCien = decSigno + "1." + mantisa + ' x 2^' + str(e)
-print(notacionCien)
+print('En notación científica es: ' + notacionCien)
 
 puntoFlotante = ""
 
@@ -87,19 +90,25 @@ elif e == 0:
     puntoFlotante = '1.' + mantisa
     
 puntoFlotante = decSigno + puntoFlotante
-print(puntoFlotante)
+print('Escrito en forma de punto flotante: ' + puntoFlotante)
 
-puntoFlotante, signo = extraerSigno(puntoFlotante)
+signo, puntoFlotante = extraerSigno(puntoFlotante)
+
+print('signo: ' + decSigno)
+
 entero, decimal = separarNumero(puntoFlotante)
 
 print('parte entera: '+ str(entero))
 print('parte decimal: ' + str(decimal))
 
-decEntero = binarioDecimal(entero)
-decDecimal = binarioDecDecimal(decimal)
+decEntero = str(binarioDecimal(entero))
+print('parte entera en base 10: ' + decEntero)
+decDecimal = str(binarioDecDecimal(decimal))
+print('parte decimal en base 10: ' + decDecimal)
 
-numero = str(decSigno) + str(decEntero) + str(decDecimal)
+resultado = decSigno + decEntero + '.' + decDecimal
 
-print('El numero en base 10 es: ' + numero)
+print('El numero en base 10 es: ' + resultado)
+
 
 
