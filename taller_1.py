@@ -24,6 +24,7 @@ def binarioDecDecimal(binario):
     parteDecimal = decimal[2:len(decimal)]
     return parteDecimal
 
+
 def separarNumero(numero):
     entero, puntoPos = parteEntera(numero)
     #print('entero: ' + str(entero))
