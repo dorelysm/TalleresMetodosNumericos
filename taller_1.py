@@ -1,7 +1,17 @@
+"""
+    Programa para pasar un número binario en forma de punto flotante 
+    normalizado a decimal
+"""
+
+#####################################
+#FUNCIONES
+
+#Pasa la parte entera de un numero binario a decimal
 def binarioDecimal(binario):
     dec = int(str(binario), 2)
     return dec
 
+#Pasa la parte decimal de un numero binario a decimal
 def binarioDecDecimal(binario):
     n = 2
     decimal = 0
