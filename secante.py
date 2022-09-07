@@ -22,12 +22,12 @@ def secante(f, x1, x2, tol):
         x1 = x2
         x2 = x3
         error = abs(f(x3))
-        n *= 1
+        n += 1
     return x3, n
 
 Xsubcero = int(input('Ingrese x0: '))
 Xsubuno = int(input('Ingrese x1: '))
-tol = 1e-4
+tol = 1e-6
 f=lambda x:x-math.cos(x)
 
 resultado, n = secante(f, Xsubcero, Xsubuno, tol)
