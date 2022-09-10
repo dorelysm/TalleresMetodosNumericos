@@ -5,13 +5,14 @@ método de la secante
 
 import math
 
-#Funciones
+# Funciones
 """
 def f(x):
     x = math.radians(x)
     resultado = -math.cos(x) + x
     return resultado
 """
+
 
 def secante(f, x1, x2, tol):
     error = 1e3
@@ -25,10 +26,12 @@ def secante(f, x1, x2, tol):
         n += 1
     return x3, n
 
+
 Xsubcero = int(input('Ingrese x0: '))
 Xsubuno = int(input('Ingrese x1: '))
 tol = 1e-6
-f=lambda x:x-math.cos(x)
+def f(x): return x-math.cos(x)
+
 
 resultado, n = secante(f, Xsubcero, Xsubuno, tol)
 
