@@ -4,14 +4,18 @@
 """
 
 #####################################
-#FUNCIONES
+# FUNCIONES
 
-#Pasa la parte entera de un numero binario a decimal
+# Pasa la parte entera de un numero binario a decimal
+
+
 def binarioDecimal(binario):
     dec = int(str(binario), 2)
     return dec
 
-#Pasa la parte decimal de un numero binario a decimal
+# Pasa la parte decimal de un numero binario a decimal
+
+
 def binarioDecDecimal(binario):
     n = 2
     decimal = 0
@@ -33,17 +37,19 @@ def separarNumero(numero):
         decimal = parteDecimal(numero, puntoPos)
     return entero, decimal
 
+
 def parteEntera(numero):
     numeroStr = str(numero)
     entero = ""
     puntoPos = len(numeroStr)
-    for i in range (len(numeroStr)):
+    for i in range(len(numeroStr)):
         if (numeroStr[i] != "."):
             entero = entero + numeroStr[i]
         elif (numeroStr[i] == "."):
             puntoPos = i
             break
     return int(entero), puntoPos
+
 
 def parteDecimal(numero, puntoPos):
     numero = str(numero)
@@ -54,6 +60,7 @@ def parteDecimal(numero, puntoPos):
     #intDecimal = int(decimal)
     return decimal
 
+
 def extraerSigno(numero):
     numero = str(numero)
     signo = "0"
@@ -63,6 +70,7 @@ def extraerSigno(numero):
     return str(signo), numero
 
 #################################################
+
 
 signo = input('Signo: ')
 exponente = input('Exponente: ')
@@ -75,10 +83,10 @@ if signo == '0':
     decSigno = '+'
 elif signo == '1':
     decSigno = '-'
-    
+
 expMax = 2**(len(exponente))-1
 exp = binarioDecimal(exponente)
-#print(exp)
+# print(exp)
 e = exp - expMax//2
 
 notacionCien = decSigno + "1." + mantisa + ' x 2^' + str(e)
@@ -99,7 +107,7 @@ elif e > 0:
     puntoFlotante = puntoFlotante + '.' + mantisa
 elif e == 0:
     puntoFlotante = '1.' + mantisa
-    
+
 puntoFlotante = decSigno + puntoFlotante
 print('Escrito en forma de punto flotante: ' + puntoFlotante)
 
@@ -109,7 +117,7 @@ print('signo: ' + decSigno)
 
 entero, decimal = separarNumero(puntoFlotante)
 
-print('parte entera: '+ str(entero))
+print('parte entera: ' + str(entero))
 print('parte decimal: ' + str(decimal))
 
 decEntero = str(binarioDecimal(entero))
@@ -120,6 +128,3 @@ print('parte decimal en base 10: ' + decDecimal)
 resultado = decSigno + decEntero + '.' + decDecimal
 
 print('El numero en base 10 es: ' + resultado)
-
-
-

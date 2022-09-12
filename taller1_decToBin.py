@@ -1,4 +1,4 @@
-#FUNCIONES
+# FUNCIONES
 # --------------------------------------------
 # Funcion para Convertir el numero decimal a binario
 def decimalBinario(decimal):
@@ -8,6 +8,8 @@ def decimalBinario(decimal):
     return binario
 
 # Funcion para Convertir la parte decimal de un numero binario a decimal
+
+
 def parteDecimalABinario(decimal):
     binD = ""
     decimal = float("0." + str(decimal))
@@ -19,14 +21,16 @@ def parteDecimalABinario(decimal):
             decimal = decimal - 1
             binD = binD + "1"
     return binD
-        
+
 # -------------------------------------------
-#Toma un numero decimal y separa la parte entera
+# Toma un numero decimal y separa la parte entera
+
+
 def parteEntera(numero):
     numeroStr = str(numero)
     entero = ""
     puntoPos = len(numeroStr)
-    for i in range (len(numeroStr)):
+    for i in range(len(numeroStr)):
         if (numeroStr[i] != "."):
             entero = entero + numeroStr[i]
         elif (numeroStr[i] == "."):
@@ -34,7 +38,9 @@ def parteEntera(numero):
             break
     return int(entero), puntoPos
 
-#Toma un numero decimal y separa la parte decimal
+# Toma un numero decimal y separa la parte decimal
+
+
 def parteDecimal(numero, puntoPos):
     numero = str(numero)
     decimal = ""
@@ -44,13 +50,16 @@ def parteDecimal(numero, puntoPos):
     intDecimal = int(decimal)
     return intDecimal
 
-#Toma un numero decimal y separa la parte entera y decimal
+# Toma un numero decimal y separa la parte entera y decimal
+
+
 def separarNumero(numero):
     entero, puntoPos = parteEntera(numero)
     decimal = 0
     if puntoPos != len(str(numero)):
         decimal = parteDecimal(numero, puntoPos)
     return entero, decimal
+
 
 def extraerSigno(numero):
     numero = str(numero)
@@ -60,29 +69,30 @@ def extraerSigno(numero):
         numero = numero[1:len(numero)]
     return signo, float(numero)
 
+
 def calcularExp(entero, decimal, bitsExp, numero):
     expmax = 2**bitsExp
     e = 0
     entero = str(entero)
     #numero = ""
-    
+
     if (abs(numero) > 1):
-        e = len(entero) -1
-            
+        e = len(entero) - 1
+
     else:
         if (numero < 1):
             e -= 1
             while decimal[0] == 0:
                 decimal = decimal[1:len(decimal)]
-                
+
     print("e" + str(e))
-            
+
     exp = e + (expmax // 2)
     print("exp: " + str(exp))
     return exp
 
 ##############################################
-               
+
 
 numero = float(input("Ingrese el numero decimal: "))
 #bitsNumero = int(input("Ingrese el numero de bits del número: "))
