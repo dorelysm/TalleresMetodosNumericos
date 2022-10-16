@@ -22,10 +22,6 @@ while abs(f_max) >= tolera:
     iteraciones += 1
 
     print(" x_a: " ,x_a, " x_b: ", x_b, " c: ", puntoIntermedio, " f_c: ", f_c, " N_itera: ", iteraciones)
-    #print(f"El valor ingresado de x_a es el siguiente {x_a}")
-    #print(f"El valor ingresado de x_a es el siguiente {x_b}")
-    #print(f"Punto medio es {f_c}")
-    #print(f"El total de iteraciones que hubo fue el siguiente: {iteraciones}")
 
     if ((f_a * f_c) < 0):
         x_b = puntoIntermedio
