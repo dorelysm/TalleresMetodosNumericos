@@ -1,5 +1,5 @@
 """
-Programa para hallar una raíz por el 
+Programa para hallar una raíz por el
 método de la secante
 """
 
@@ -34,6 +34,6 @@ def metodo_secante():
     tol = 1e-4
 
     resultado, n = secante(funcion, Xsubcero, Xsubuno, tol)
-
+    print("")
     print("Raíz: {:4f}".format(resultado))
     print("Número de iteraciones: {:d}".format(n))

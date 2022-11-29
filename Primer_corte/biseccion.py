@@ -1,11 +1,9 @@
 import math
 
 
-def biseccion(x):
-    return eval(e)
-
-
 def metodo_biseccion():
+    def biseccion(x):
+        return eval(e)
     iteraciones = 0
     f_max = 999999
     e = input("Ingrese la función a resolver: ")

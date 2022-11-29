@@ -2,34 +2,23 @@ import numpy as np
 import math
 
 # ------------------------------------------------------
-
-
 def mean_relative_error(y_true, y_pred,):
     relative_error = np.average(np.abs(y_true - y_pred) / y_true, axis=0)
     return relative_error
-
 # ------------------------------------------------------
-
-
 def calculoPI():
     print(
         f"El número redondeado de PI a cuatro cifras es -{round(math.pi, 4)}")
     errorRedondeo = (round(math.pi, 4) - math.pi)
     print(f"El error de redondeo es {errorRedondeo}")
-
 # ------------------------------------------------------
-
-
 def valoresIngresados():
     num = float(input("Digite un número: "))
     # Método Round, sirve para redondear los números y la cantidad de cifras que desea.
     print(f"El número redondeado a cuatro cifras es - {round(num, 4)}")
     error = (round(num, 4) - num)
     print(f"El error es {error}")
-
 # ------------------------------------------------------
-
-
 def calculoLogE():
     op = int(input("""Digite la opción: 
     1. Encontrar el logaritmo natural de E.
@@ -54,8 +43,6 @@ def calculoLogE():
             print("Fin del programa")
             break
 # ------------------------------------------------------
-
-
 def calculoRaizDos():
     op = int(input("""Digite la opción:
     1. Calculo de raíz cuadrada.
@@ -82,10 +69,7 @@ def calculoRaizDos():
         elif (menu == 3):
             print("Fin del programa.")
             break
-
 # ------------------------------------------------------
-
-
 def calculoRaizTres():
     op = int(input("""Digite la opción:
     1. Calculo de raíz cubica.
@@ -112,8 +96,6 @@ def calculoRaizTres():
         elif (menu == 3):
             print("Fin del programa.")
             break
-
-
 # ------------------------------------------------------
 menu = int(input("""Digite la opcion: 
 1. Error de redondeo ingresando valores por consola.
