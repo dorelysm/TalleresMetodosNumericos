@@ -6,13 +6,10 @@ método de la secante
 import math
 
 # Funciones
-
-
 def funcion(x):
     x = math.radians(x)
     resultado = math.cos(x) + x
     return resultado
-
 
 def secante(funcion, Xsubcero, Xsubuno, tol):
     error = 1e3
@@ -31,14 +28,12 @@ def secante(funcion, Xsubcero, Xsubuno, tol):
 
     return Xsubn, n
 
+def metodo_secante():
+    Xsubcero = int(input('Ingrese x0: '))
+    Xsubuno = int(input('Ingrese x1: '))
+    tol = 1e-4
 
-# Entradas
-#func = input('Ingrese f(x): ')
-Xsubcero = int(input('Ingrese x0: '))
-Xsubuno = int(input('Ingrese x1: '))
-tol = 1e-4
+    resultado, n = secante(funcion, Xsubcero, Xsubuno, tol)
 
-resultado, n = secante(funcion, Xsubcero, Xsubuno, tol)
-
-print("Raíz: {:4f}".format(resultado))
-print("Número de iteraciones: {:d}".format(n))
+    print("Raíz: {:4f}".format(resultado))
+    print("Número de iteraciones: {:d}".format(n))

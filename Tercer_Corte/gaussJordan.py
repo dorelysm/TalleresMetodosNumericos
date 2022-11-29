@@ -40,5 +40,6 @@ def gauss_jordan():
     
     return solucion
 
-solucion=gauss_jordan()        
-print(solucion)
+def GaussJordan():
+    solucion=gauss_jordan()        
+    print(solucion)
