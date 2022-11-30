@@ -71,60 +71,60 @@ def extraerSigno(numero):
 
 #################################################
 
+def conversionBinToDec():
+    signo = input('Signo: ')
+    exponente = input('Exponente: ')
+    mantisa = input('Mantisa: ')
 
-signo = input('Signo: ')
-exponente = input('Exponente: ')
-mantisa = input('Mantisa: ')
+    numBin = signo + ' ' + exponente + ' ' + mantisa
+    print('El número ingresado es: ' + numBin)
 
-numBin = signo + ' ' + exponente + ' ' + mantisa
-print('El número ingresado es: ' + numBin)
+    if signo == '0':
+        decSigno = '+'
+    elif signo == '1':
+        decSigno = '-'
 
-if signo == '0':
-    decSigno = '+'
-elif signo == '1':
-    decSigno = '-'
+    expMax = 2**(len(exponente))-1
+    exp = binarioDecimal(exponente)
+    # print(exp)
+    e = exp - expMax//2
 
-expMax = 2**(len(exponente))-1
-exp = binarioDecimal(exponente)
-# print(exp)
-e = exp - expMax//2
+    notacionCien = decSigno + "1." + mantisa + ' x 2^' + str(e)
+    print('En notación científica es: ' + notacionCien)
 
-notacionCien = decSigno + "1." + mantisa + ' x 2^' + str(e)
-print('En notación científica es: ' + notacionCien)
+    puntoFlotante = ""
 
-puntoFlotante = ""
+    if e < 0:
+        for i in range(abs(e)):
+            puntoFlotante = puntoFlotante + '0'
+        puntoFlotante = puntoFlotante + '.1'
+        puntoFlotante = puntoFlotante + mantisa
+    elif e > 0:
+        puntoFlotante = puntoFlotante + '1'
+        for i in range(e):
+            puntoFlotante = puntoFlotante + mantisa[0]
+            mantisa = mantisa[1: len(mantisa)]
+        puntoFlotante = puntoFlotante + '.' + mantisa
+    elif e == 0:
+        puntoFlotante = '1.' + mantisa
 
-if e < 0:
-    for i in range(abs(e)):
-        puntoFlotante = puntoFlotante + '0'
-    puntoFlotante = puntoFlotante + '.1'
-    puntoFlotante = puntoFlotante + mantisa
-elif e > 0:
-    puntoFlotante = puntoFlotante + '1'
-    for i in range(e):
-        puntoFlotante = puntoFlotante + mantisa[0]
-        mantisa = mantisa[1: len(mantisa)]
-    puntoFlotante = puntoFlotante + '.' + mantisa
-elif e == 0:
-    puntoFlotante = '1.' + mantisa
+    puntoFlotante = decSigno + puntoFlotante
+    print('Escrito en forma de punto flotante: ' + puntoFlotante)
 
-puntoFlotante = decSigno + puntoFlotante
-print('Escrito en forma de punto flotante: ' + puntoFlotante)
+    signo, puntoFlotante = extraerSigno(puntoFlotante)
 
-signo, puntoFlotante = extraerSigno(puntoFlotante)
+    print('signo: ' + decSigno)
 
-print('signo: ' + decSigno)
+    entero, decimal = separarNumero(puntoFlotante)
 
-entero, decimal = separarNumero(puntoFlotante)
+    print('parte entera: ' + str(entero))
+    print('parte decimal: ' + str(decimal))
 
-print('parte entera: ' + str(entero))
-print('parte decimal: ' + str(decimal))
+    decEntero = str(binarioDecimal(entero))
+    print('parte entera en base 10: ' + decEntero)
+    decDecimal = str(binarioDecDecimal(decimal))
+    print('parte decimal en base 10: ' + decDecimal)
 
-decEntero = str(binarioDecimal(entero))
-print('parte entera en base 10: ' + decEntero)
-decDecimal = str(binarioDecDecimal(decimal))
-print('parte decimal en base 10: ' + decDecimal)
+    resultado = decSigno + decEntero + '.' + decDecimal
 
-resultado = decSigno + decEntero + '.' + decDecimal
-
-print('El numero en base 10 es: ' + resultado)
+    print('El numero en base 10 es: ' + resultado)

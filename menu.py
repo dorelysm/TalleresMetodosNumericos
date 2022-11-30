@@ -21,25 +21,23 @@ Opciones:
 17. calculo de gauss seidel
 """
 #------------------------------------------------------------------
-from Primer_corte.epsilon import *
-from Primer_corte.biseccion import *
-from Primer_corte.metodo_secante import *
+from Primer_corte.epsilon import calcular_epsilon
+from Primer_corte.biseccion import metodo_biseccion
+from Primer_corte.metodo_secante import metodo_secante
 from Primer_corte.newton import *
 from Primer_corte.reglaF import *
 from Primer_corte.secante import *
-##from Primer_corte.taller_1 import *
-#from Primer_corte.taller1_decToBin import *
-#from Primer_corte.taller2 import *
-#from Primer_corte.taller3 import *
-#------------------------------------------------------------------
-#------------------------------------------------------------------
-#------------------------------------------------------------------
-#------------------------------------------------------------------
+from Primer_corte.taller_1 import conversionBinToDec
+from Primer_corte.taller1_decToBin import conversionrDecToBin
+from Primer_corte.taller2 import calcular_error
+from Segundo_corte.derivacion import calcular_derivadas
+from Segundo_corte.integracion import integracion
+from Segundo_corte.ecuacionesDiferenciales import calcular_metodo_euler, calcular_metodo_rungeK
 from Tercer_Corte.gaussJordan import GaussJordan
 #------------------------------------------------------------------
 
 opc = 1
-while opc != 18:
+while opc != 17:
     print("""
           Opciones:
             1. Calculo Biseccion
@@ -48,18 +46,17 @@ while opc != 18:
             4. Calculo de Newton
             5. Calculo de Regla Falsa
             6. Calculo metodo de la secante
-            7. Calculo numero binario en forma punto flotante
-            8. Conversion numero binario a decimal
+            7. Conversion numero binario a decimal
+            8. Conversion numero decimal a binario
             9. Calculo del error
-            10. Calculo método de bisección
-            11. Calculo de derivación
-            12. Calculo de Ecuaciones Diferenciales
-            13. Calculo de Integración
-            14. Calculo de Integración Númerica
-            15. Calculo de Lagrange
-            16. Calculo de Guass Jordan
-            17. Calculo de Guass Seidel
-            18.. Salir
+            10. Calculo de derivación
+            11. Calculo de Ecuaciones Diferenciales por método de Euler
+            12. Calculo de Ecuaciones Diferenciales por método de Runge-Kutta
+            13. Calculo de Integración Númerica
+            14. Calculo de Lagrange
+            15. Calculo de Gauss Jordan
+            16. Calculo de Gauss Seidel
+            17. Salir
           """)
     opc = int(input('Ingrese su opción: '))
     if opc == 1:  # calcular biseccion
@@ -69,39 +66,44 @@ while opc != 18:
         calcular_epsilon()  # calcular epsilon
         break
     elif opc == 3:
-        metodo_secante()
+        metodo_secante() #metodo de secante
         break
-    elif opc == 4:
-        newton()
+    elif opc == 4: #metodo de newton
+        #newton()
         break
-    elif opc == 5:
+    elif opc == 5: #metodo de regla falsa
         reglaF()
         break
-    elif opc == 6:
+    elif opc == 6: # metodo de la secante
         secante()
         break
     elif opc == 7:
+        conversionBinToDec() #conversion binario a decimal
         break
     elif opc == 8:
+        conversionrDecToBin()#conversion decimal a binario
         break
     elif opc == 9:
+        calcular_error() #Calculo de error por distintos métodos
         break
-    elif opc == 10:
-        GaussJordan()
+    elif opc == 10: #Calculo de derivadas por distintos métodos
+        calcular_derivadas()
         break
     elif opc == 11:
+        calcular_metodo_euler() #Ecuaciones diferenciales por el metodo de euler
         break
     elif opc == 12:
+        calcular_metodo_rungeK() #Ecuaciones diferenciales por el metodo de Ruge-Kutta
         break
     elif opc == 13:
+        integracion() #Calculo de integrales
         break
     elif opc == 14:
         break
     elif opc == 15:
+        GaussJordan()
         break
     elif opc == 16:
-        break
-    elif opc == 17:
         break
     else:
         print("Fin del programa")

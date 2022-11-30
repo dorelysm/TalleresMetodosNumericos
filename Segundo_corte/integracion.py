@@ -84,13 +84,13 @@ def sum_fxi_par(a,b,h,n): #Sumatoria de xi pares
 
 ############################################################
 
+def integracion():
+  a=float(input('A:')) #Límite inferior
+  b=float(input('B:')) #Límite superios
 
-a=float(input('A:')) #Límite inferior
-b=float(input('B:')) #Límite superios
-
-trapecio(a,b)
-simpson1_3(a,b)
-simpson3_8(a,b)
-n=int(input('Ingrese n: ')) #Número de intervalos
-trapecio_compuesto(a,b,n)
-c_simpson1_3(a,b,n)
+  trapecio(a,b)
+  simpson1_3(a,b)
+  simpson3_8(a,b)
+  n=int(input('Ingrese n: ')) #Número de intervalos
+  trapecio_compuesto(a,b,n)
+  c_simpson1_3(a,b,n)

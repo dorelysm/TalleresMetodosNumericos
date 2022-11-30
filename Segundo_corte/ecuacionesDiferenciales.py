@@ -82,14 +82,21 @@ def metodo_rk(h, ti, tf, yi):
 
 ###################################
 
-#Valores inicales
-h = 1
-ti = 0
-tf = 4
-yi = 2
+def valores_iniciales():
+    #Valores iniciales
+    h = int(input('h: '))
+    ti = int(input('ti: '))
+    tf = int(input('tf: '))
+    yi = int(input('yi: '))
+    
+    return h, ti, tf, yi
 
 #Metodo de Euler
-metodo_euler(h, ti, tf, yi)
+def calcular_metodo_euler():
+    h, ti, tf, yi = valores_iniciales()
+    metodo_euler(h, ti, tf, yi)
 
 #Metodo de Runge-Kutta
-metodo_rk(h, ti, tf, yi)
+def calcular_metodo_rungeK():
+    h, ti, tf, yi = valores_iniciales()
+    metodo_rk(h, ti, tf, yi)

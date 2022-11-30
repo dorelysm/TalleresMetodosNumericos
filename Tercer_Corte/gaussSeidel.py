@@ -1,13 +1,9 @@
 from math import*
 from pprint import pprint
 
-
 def distinf(x, y):
     """Implementacion distancia dada por la norma infinito"""
     return max([abs(x[i]-y[i]) for i in range(len(x))])
-
-
-
 
 def GaussSeidel(A, b, x0, TOL, MAX):
     """

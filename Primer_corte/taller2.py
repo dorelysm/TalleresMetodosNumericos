@@ -97,29 +97,30 @@ def calculoRaizTres():
             print("Fin del programa.")
             break
 # ------------------------------------------------------
-menu = int(input("""Digite la opcion: 
-1. Error de redondeo ingresando valores por consola.
-2. Error de redondeo de e (base natural del logaritmo).
-3. Error de redondeo de constante PI.
-4. Error de redondeo de √2
-5. Error de redondeo de raiz cubica √7
-6. Salir 
-Digite la opcion: \n"""))
-while menu != 6:
-    if (menu == 1):
-        valoresIngresados()
-        break
-    elif (menu == 2):
-        calculoLogE()
-        break
-    elif (menu == 3):
-        calculoPI()
-        break
-    elif (menu == 4):
-        calculoRaizDos()
-    elif (menu == 5):
-        calculoRaizTres()
-        break
-    elif (menu == 6):
-        print("Fin del programa.")
-        break
+def calcular_error():
+    menu = int(input("""Digite la opcion: 
+    1. Error de redondeo ingresando valores por consola.
+    2. Error de redondeo de e (base natural del logaritmo).
+    3. Error de redondeo de constante PI.
+    4. Error de redondeo de √2
+    5. Error de redondeo de raiz cubica √7
+    6. Salir 
+    Digite la opcion: \n"""))
+    while menu != 6:
+        if (menu == 1):
+            valoresIngresados()
+            break
+        elif (menu == 2):
+            calculoLogE()
+            break
+        elif (menu == 3):
+            calculoPI()
+            break
+        elif (menu == 4):
+            calculoRaizDos()
+        elif (menu == 5):
+            calculoRaizTres()
+            break
+        elif (menu == 6):
+            print("Fin del programa.")
+            break

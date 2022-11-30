@@ -93,18 +93,18 @@ def calcularExp(entero, decimal, bitsExp, numero):
 
 ##############################################
 
+def conversionrDecToBin():
+    numero = float(input("Ingrese el numero decimal: "))
+    #bitsNumero = int(input("Ingrese el numero de bits del número: "))
+    #bitsMantisa = int(input("Ingrese el número de bits de la mantisa: "))
+    #bitsExp = bitsNumero - bitsMantisa - 1
 
-numero = float(input("Ingrese el numero decimal: "))
-#bitsNumero = int(input("Ingrese el numero de bits del número: "))
-#bitsMantisa = int(input("Ingrese el número de bits de la mantisa: "))
-#bitsExp = bitsNumero - bitsMantisa - 1
+    signo, numero = extraerSigno(numero)
+    entero, decimal = separarNumero(numero)
+    print(str(decimalBinario(entero)) + "." + str(decimalBinario(decimal)))
 
-signo, numero = extraerSigno(numero)
-entero, decimal = separarNumero(numero)
-print(str(decimalBinario(entero)) + "." + str(decimalBinario(decimal)))
+    #exp = decimalBinario(calcularExp(entero, decimal, bitsExp, numero))
 
-#exp = decimalBinario(calcularExp(entero, decimal, bitsExp, numero))
-
-#mantisa = str(decimalBinario(entero)) + str(decimalBinario(decimal))
-#numero_binario = str(signo) + " " + str(exp) + " " + mantisa
-#print("El número en binario punto flotante es: " + numero_binario)
+    #mantisa = str(decimalBinario(entero)) + str(decimalBinario(decimal))
+    #numero_binario = str(signo) + " " + str(exp) + " " + mantisa
+    #print("El número en binario punto flotante es: " + numero_binario)

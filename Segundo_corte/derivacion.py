@@ -90,18 +90,73 @@ def sd_dfr_3p(x,h):
 
 #################################
 
-x0 = 1.1
-h = 0.1
+def calcular_derivadas():
+    x0 = 1.1
+    h = 0.1
 
-pd_dfp_2p(x0, h)
-pd_dfp_3p(x0, h)
-pd_dfc_3p(x0, h)
-pd_dfc_4p(x0, h)
-pd_dfr_2p(x0, h)
-pd_dfr_3p(x0, h)
-sd_dfp_2p(x0, h)
-sd_dfp_3p(x0, h)
-sd_dfc_3p(x0, h)
-sd_dfc_5p(x0, h)
-sd_dfr_2p(x0, h)
-sd_dfr_3p(x0, h)
+    opc = 1
+    while opc!=0:
+        print("""
+              1. primera derivada por el método de diferencias progresivas de dos puntos
+              2. primera derivada por el método de diferencias progresivas de tres puntos
+              3. primera derivada por el método de diferencias centradas de tres puntos
+              4. primera derivada por el método de diferencias centradas de cuatro puntos
+              5. primera derivada por el método de diferencias regresivas de dos puntos
+              6. primera derivada por el método de diferencias regresivas de tres puntos
+              7. segunda derivada por el método de diferencias progresivas de dos puntos
+              8. segunda derivada por el método de diferencias progresivas de tres puntos
+              9. segunda derivada por el método de diferencias centradas de tres puntos
+              10. segunda derivada por el método de diferencias centradas de cinco puntos
+              11. segunda derivada por el método de diferencias regresivas de dos puntos
+              12. segunda derivada por el método de diferencias regresivas de tres puntos
+              """)
+        
+        opc = int(input('Ingrese su opción: '))
+        
+        if opc == 1:
+            pd_dfp_2p(x0, h) #primera derivada por el método de diferencias progresivas de dos puntos
+            break
+        
+        elif opc == 2:
+            pd_dfp_3p(x0, h)#primera derivada por el método de diferencias progresivas de tres puntos
+            break
+        
+        elif opc == 3:
+            pd_dfc_3p(x0, h)#primera derivada por el método de diferencias centradas de tres puntos
+            break
+        
+        elif opc == 4:
+            pd_dfc_4p(x0, h)#primera derivada por el método de diferencias centradas de cuatro puntos
+            break
+        
+        elif opc == 5:
+            pd_dfr_2p(x0, h)#primera derivada por el método de diferencias regresivas de dos puntos
+            break
+        
+        elif opc == 6:
+            pd_dfr_3p(x0, h)#primera derivada por el método de diferencias regresivas de tres puntos
+            break
+        
+        elif opc == 7:
+            sd_dfp_2p(x0, h)#segunda derivada por el método de diferencias progresivas de dos puntos
+            break
+        
+        elif opc == 8:
+            sd_dfp_3p(x0, h)#segunda derivada por el método de diferencias progresivas de tres puntos
+            break
+        
+        elif opc == 9:
+            sd_dfc_3p(x0, h)#segunda derivada por el método de diferencias centradas de tres puntos
+            break
+        
+        elif opc == 10:
+            sd_dfc_5p(x0, h)#segunda derivada por el método de diferencias centradas de cinco puntos
+            break
+        
+        elif opc == 11:
+            sd_dfr_2p(x0, h)#segunda derivada por el método de diferencias regresivas de dos puntos
+            break
+        
+        elif opc == 12:
+            sd_dfr_3p(x0, h)#segunda derivada por el método de diferencias regresivas de tres puntos
+            break
