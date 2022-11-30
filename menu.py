@@ -34,6 +34,7 @@ from Segundo_corte.derivacion import calcular_derivadas
 from Segundo_corte.integracion import integracion
 from Segundo_corte.ecuacionesDiferenciales import calcular_metodo_euler, calcular_metodo_rungeK
 from Tercer_Corte.gaussJordan import GaussJordan
+from Tercer_Corte.descomposicionLU import descomposicion_lu
 #------------------------------------------------------------------
 
 opc = 1
@@ -56,7 +57,8 @@ while opc != 17:
             14. Calculo de Lagrange
             15. Calculo de Gauss Jordan
             16. Calculo de Gauss Seidel
-            17. Salir
+            17. Calculo de Descomposicion LU
+            18. Salir
           """)
     opc = int(input('Ingrese su opción: '))
     if opc == 1:  # calcular biseccion
@@ -100,10 +102,13 @@ while opc != 17:
         break
     elif opc == 14:
         break
-    elif opc == 15:
+    elif opc == 15: #gauss jordan
         GaussJordan()
         break
-    elif opc == 16:
+    elif opc == 16: #gauss seidel
+        break
+    elif opc == 17: #descomposicion lu
+        descomposicion_lu()
         break
     else:
         print("Fin del programa")
