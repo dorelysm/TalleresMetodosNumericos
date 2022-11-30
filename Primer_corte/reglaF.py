@@ -31,7 +31,7 @@ def reglaF(funcion, x_i, x_f, iteraciones=1000, error_relativo=0.001):
     else:
         print("No es posible encontrar los valores.")
 
-
-"""Llamamos al método, cuya función lambda va a servir para establecer los valores de dichas variables"""
-reglaF(lambda x: 4*x**4-9*x**2+1, 1, 4, 2, 2)
-"""Los valores que seran modificados son los 4 ultimos :) """
+def calcular_reglaf():
+    """Llamamos al método, cuya función lambda va a servir para establecer los valores de dichas variables"""
+    reglaF(lambda x: 4*x**4-9*x**2+1, 1, 4, 2, 2)
+    """Los valores que seran modificados son los 4 ultimos :) """

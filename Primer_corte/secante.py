@@ -26,14 +26,14 @@ def secante(f, x1, x2, tol):
         n += 1
     return x3, n
 
+def calcular_secante():
+    Xsubcero = int(input('Ingrese x0: '))
+    Xsubuno = int(input('Ingrese x1: '))
+    tol = 1e-6
+    def f(x): return x-math.cos(x)
 
-Xsubcero = int(input('Ingrese x0: '))
-Xsubuno = int(input('Ingrese x1: '))
-tol = 1e-6
-def f(x): return x-math.cos(x)
 
+    resultado, n = secante(f, Xsubcero, Xsubuno, tol)
 
-resultado, n = secante(f, Xsubcero, Xsubuno, tol)
-
-print("Raíz: {:4f}".format(resultado))
-print("Número de iteraciones: {:d}".format(n))
+    print("Raíz: {:4f}".format(resultado))
+    print("Número de iteraciones: {:d}".format(n))

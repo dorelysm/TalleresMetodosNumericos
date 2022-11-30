@@ -50,11 +50,11 @@ def newton(f, fprima, pO, tol, n):
     print("Iteraciones agotadas: Error!")
     return None
 
+def calcular_newton():
+    # trig(x), trigprima(x), pO = pi/4, TOL=10**-8, No=100
+    print("Newton funcion trig(x):")
+    newton(trig, trigprima, pi/4, 1e-8, 100)
 
-# trig(x), trigprima(x), pO = pi/4, TOL=10**-8, No=100
-print("Newton funcion trig(x):")
-newton(trig, trigprima, pi/4, 1e-8, 100)
-
-# expo(x), expoprima(x), po=4.0, TOL=10**-8, No=100
-print("Newton funcion expo(x):")
-newton(expo, expoprima, 4, 1e-8, 100)
+    # expo(x), expoprima(x), po=4.0, TOL=10**-8, No=100
+    print("Newton funcion expo(x):")
+    newton(expo, expoprima, 4, 1e-8, 100)

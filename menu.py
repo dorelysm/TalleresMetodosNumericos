@@ -24,9 +24,9 @@ Opciones:
 from Primer_corte.epsilon import calcular_epsilon
 from Primer_corte.biseccion import metodo_biseccion
 from Primer_corte.metodo_secante import metodo_secante
-from Primer_corte.newton import *
-from Primer_corte.reglaF import *
-from Primer_corte.secante import *
+from Primer_corte.newton import calcular_newton
+from Primer_corte.reglaF import calcular_reglaf
+from Primer_corte.secante import calcular_secante
 from Primer_corte.taller_1 import conversionBinToDec
 from Primer_corte.taller1_decToBin import conversionrDecToBin
 from Primer_corte.taller2 import calcular_error
@@ -72,13 +72,13 @@ while opc != 17:
         metodo_secante() #metodo de secante
         break
     elif opc == 4: #metodo de newton
-        newton()
+        calcular_newton()
         break
     elif opc == 5: #metodo de regla falsa
-        reglaF()
+        calcular_reglaf()
         break
     elif opc == 6: # metodo de la secante
-        secante()
+        calcular_secante()
         break
     elif opc == 7:
         conversionBinToDec() #conversion binario a decimal
