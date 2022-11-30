@@ -33,6 +33,7 @@ from Primer_corte.taller2 import calcular_error
 from Segundo_corte.derivacion import calcular_derivadas
 from Segundo_corte.integracion import integracion
 from Segundo_corte.ecuacionesDiferenciales import calcular_metodo_euler, calcular_metodo_rungeK
+from Segundo_corte.lagrange import calcular_lagrange
 from Tercer_Corte.gaussJordan import GaussJordan
 from Tercer_Corte.descomposicionLU import descomposicion_lu
 #------------------------------------------------------------------
@@ -71,7 +72,7 @@ while opc != 17:
         metodo_secante() #metodo de secante
         break
     elif opc == 4: #metodo de newton
-        #newton()
+        newton()
         break
     elif opc == 5: #metodo de regla falsa
         reglaF()
@@ -100,7 +101,8 @@ while opc != 17:
     elif opc == 13:
         integracion() #Calculo de integrales
         break
-    elif opc == 14:
+    elif opc == 14: #lagrange
+        calcular_lagrange()
         break
     elif opc == 15: #gauss jordan
         GaussJordan()
