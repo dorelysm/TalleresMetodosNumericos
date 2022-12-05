@@ -2,8 +2,10 @@ import math
 
 #Funciones
 def funcion(x): #Calcular f(x)
-    #x = math.radians(x)
-    resultado = math.log(x) #Define la funcion f(x)
+    x = math.radians(x)
+    #resultado = math.log(x) #Define la funcion f(x)
+    #resultado = math.e**(2*x)
+    resultado = eval(input("Ingrese la funcion: "))
     return resultado
 
 def calcular_h(a,b,n): #Calcular el paso

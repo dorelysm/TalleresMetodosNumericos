@@ -1,6 +1,7 @@
 from math import*
 from pprint import pprint
 
+
 def distinf(x, y):
     """Implementacion distancia dada por la norma infinito"""
     return max([abs(x[i]-y[i]) for i in range(len(x))])
@@ -39,31 +40,33 @@ def GaussSeidel(A, b, x0, TOL, MAX):
     print("Iteraciones agotadas")
     return None
 
-A = [[2, 1], [5, 7]]
-b = [11, 13]
-x0 = [1, 1]
-print("Matriz A:")
-pprint(A)
-print("Vector b:")
-pprint(b)
-print("Semilla x0:")
-pprint(x0)
-print("Iteración de Gauss-Seidel")
-# TOL = 10−5, MAX = 50
-GaussSeidel(A, b, x0, 1e-5, 50)
-A = [[10, -1, 2], [-1, 11, -1], [2, -1, 10]]
-b = [6, 25, -11]
-x0 = [0, 0, 0]
-print("Matriz A:")
-pprint(A)
-print("Vector b:")
-pprint(b)
-print("Semilla x0:")
-pprint(x0)
-print("Iteración de Gauss-Seidel")
-# TOL = 10−10, MAX = 50
-GaussSeidel(A, b, x0, 1e-10, 50)
-
+def GAUSSSEIDEL():
+    A = [[2, 1], [5, 7]]
+    b = [11, 13]
+    x0 = [1, 1]
+    print("Matriz A:")
+    pprint(A)
+    print("Vector b:")
+    pprint(b)
+    print("Semilla x0:")
+    pprint(x0)
+    print("Iteración de Gauss-Seidel")
+    # TOL = 10−5, MAX = 50
+    GaussSeidel(A, b, x0, 1e-5, 50)
+    """
+    A = [[10, -1, 2], [-1, 11, -1], [2, -1, 10]]
+    b = [6, 25, -11]
+    x0 = [0, 0, 0]
+    print("Matriz A:")
+    pprint(A)
+    print("Vector b:")
+    pprint(b)
+    print("Semilla x0:")
+    pprint(x0)
+    print("Iteración de Gauss-Seidel")
+    # TOL = 10−10, MAX = 50
+    GaussSeidel(A, b, x0, 1e-10, 50)
+    """
 
 
 

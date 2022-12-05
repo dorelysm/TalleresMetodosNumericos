@@ -92,8 +92,8 @@ def sd_dfr_3p(x,h):
 #################################
 
 def calcular_derivadas():
-    x0 = 1.1
-    h = 0.1
+    x0 = float(input('Ingrese x0: '))
+    h = float(input('Ingrese h: '))
 
     opc = 1
     while opc!=0:

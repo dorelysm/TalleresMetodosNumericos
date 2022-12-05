@@ -43,3 +43,4 @@ def gauss_jordan():
 def GaussJordan():
     solucion=gauss_jordan()        
     print(solucion)
+    

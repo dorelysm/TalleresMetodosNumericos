@@ -36,6 +36,7 @@ from Segundo_corte.ecuacionesDiferenciales import calcular_metodo_euler, calcula
 #from Segundo_corte.lagrange import calcular_lagrange
 from Tercer_Corte.gaussJordan import GaussJordan
 #from Tercer_Corte.descomposicionLU import descomposicion_lu
+from Tercer_Corte.gaussSeidel import GAUSSSEIDEL
 #------------------------------------------------------------------
 
 opc = 1
@@ -108,6 +109,8 @@ while opc != 17:
         GaussJordan()
         break
     elif opc == 16: #gauss seidel
+        print("Definir los valores en el módulo Tercer_Corte/gaussSeidel.py")
+        GAUSSSEIDEL()
         break
     elif opc == 17: #descomposicion lu
         #descomposicion_lu()
