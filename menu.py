@@ -8,11 +8,11 @@ Opciones:
 4. calculo de metodo newton
 5. calculo de metodo regla falsa
 6. calculo de metodo secante
-7. calculo conversiones de numeros binario en forma de punto flotante
-8. calculo de conversion numero binario a decimal
-9. calculo del error
+7. calculo conversiones de numeros binario en forma de punto flotante👍
+8. calculo de conversion numero binario a decimal👍
+9. calculo del error👍
 10. calculo de metodo de biseccion
-11. calculo de derivacion
+11. calculo de derivacion👍
 12. calculo de ED
 13. calculo de integracion
 14. calculo de integracion numerica
@@ -33,9 +33,9 @@ from Primer_corte.taller2 import calcular_error
 from Segundo_corte.derivacion import calcular_derivadas
 from Segundo_corte.integracion import integracion
 from Segundo_corte.ecuacionesDiferenciales import calcular_metodo_euler, calcular_metodo_rungeK
-from Segundo_corte.lagrange import calcular_lagrange
+#from Segundo_corte.lagrange import calcular_lagrange
 from Tercer_Corte.gaussJordan import GaussJordan
-from Tercer_Corte.descomposicionLU import descomposicion_lu
+#from Tercer_Corte.descomposicionLU import descomposicion_lu
 #------------------------------------------------------------------
 
 opc = 1
@@ -102,7 +102,7 @@ while opc != 17:
         integracion() #Calculo de integrales
         break
     elif opc == 14: #lagrange
-        calcular_lagrange()
+        #calcular_lagrange()
         break
     elif opc == 15: #gauss jordan
         GaussJordan()
@@ -110,7 +110,7 @@ while opc != 17:
     elif opc == 16: #gauss seidel
         break
     elif opc == 17: #descomposicion lu
-        descomposicion_lu()
+        #descomposicion_lu()
         break
     else:
         print("Fin del programa")
